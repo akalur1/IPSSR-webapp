@@ -1,0 +1,122 @@
+<html>
+
+<head>
+  <script src="shared/jquery.js" type="text/javascript"></script>
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="shared/shiny.css"/>
+
+
+<!--Use this to pick color https://htmlcolorcodes.com/ -->
+
+<style>
+.myborder{
+ border-style:solid;
+ border-color:#287EC7;
+ margin: 50px;
+ width: 500px;
+}
+{
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 45%;
+}
+
+.right {
+  width: 15%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+  <style>
+.button {
+  background-color: #5BB5F0;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: blue;
+}
+</style>
+
+</head>
+
+
+  <h1>Revised International Prognostic Scoring System (IPSS-R) for Myelodysplastic Syndromes Risk Assessment Calculator</h1>
+  <p>Developed by the International Working Group for the Prognosis of MDS (IWG-PM) under the aegis of the MDS Foundation, Inc.
+
+When entering values into the calculator, note the units given in parentheses. Also note that the usual ranges, given for orientation, are in brackets. These are not normal ranges.</p>
+
+<div class="myborder">
+<div class="row">
+  <div class="column left" style="background-color:white;">
+    <b>Variables (units) [usual range]</b>
+    <p>Hemoglobin (g/dL) [4-20]</p>
+    <p>A possible conversion for Hb values:</p>
+    <p>10 g/dL= 6.2 mmol/L, 8 g/dL= 5.0 mmol/L</p>
+    <p>Absolute Neutrophil Count (x109/L) [0-15]</p>
+    <p>Platelets (x109/L) [0-2000]</p>
+    <p>Bone Marrow Blasts (percent) [0-30]</p>
+    <p>Cytogenetic Category</p>
+    <p> </p>
+  </div>
+  <div class="column right" style="background-color:white;">
+    <b>Value</b>
+    <p><textarea resize: none; name="HValue" id="HValue" style="width:80px;height:25px;background-color:#F0EDED;border:none;font:22px/25px sans-serif;" readonly></textarea></p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p><textarea resize: none; name="HValue" id="HValue" style="width:80px;height:25px;background-color:#F0EDED;border:none;font:22px/25px sans-serif;" readonly></textarea></p>
+    <p><textarea resize: none; name="HValue" id="HValue" style="width:80px;height:25px;background-color:#F0EDED;border:none;font:22px/25px sans-serif;" readonly></textarea></p>
+    <p><textarea resize: none; name="HValue" id="HValue" style="width:80px;height:25px;background-color:#F0EDED;border:none;font:22px/25px sans-serif;" readonly></textarea></p>
+
+
+   
+  </div>
+</div>
+
+<br><br>
+  
+  <div class="control">
+    <label class="radio">
+      <input type="radio" name="answer">
+      Very Good
+    </label>
+    <label class="radio">
+      <input type="radio" name="answer">
+      Good
+    </label>
+    <label class="radio">
+      <input type="radio" name="answer">
+      Intermediate
+    </label>
+    <label class="radio">
+      <input type="radio" name="answer">
+      Poor
+    </label>
+    <label class="radio">
+      <input type="radio" name="answer">
+      Very Poor
+    </label>
+   </div>
+</div>
+
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="button">Calculate</button></p>
